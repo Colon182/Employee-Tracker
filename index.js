@@ -31,10 +31,10 @@ async function loadMainPrompts() {
           value: "VIEW_EMPLOYEES_BY_DEPARTMENT"
         },
         // Bonus
-        {
-          name: "View All Employees By Manager",
-          value: "VIEW_EMPLOYEES_BY_MANAGER"
-        },
+        // {
+        //   name: "View All Employees By Manager",
+        //   value: "VIEW_EMPLOYEES_BY_MANAGER"
+        // },
         {
           name: "Add Employee",
           value: "ADD_EMPLOYEE"
@@ -49,10 +49,10 @@ async function loadMainPrompts() {
           value: "UPDATE_EMPLOYEE_ROLE"
         },
         // Bonus
-        {
-          name: "Update Employee Manager",
-          value: "UPDATE_EMPLOYEE_MANAGER"
-        },
+        // {
+        //   name: "Update Employee Manager",
+        //   value: "UPDATE_EMPLOYEE_MANAGER"
+        // },
         {
           name: "View All Roles",
           value: "VIEW_ROLES"
@@ -94,15 +94,15 @@ async function loadMainPrompts() {
     case "VIEW_EMPLOYEES_BY_DEPARTMENT":
       return viewEmployeesByDepartment();
     // added vie employees by manager
-      case "VIEW_EMPLOYEES_BY_MANAGER":
-      return viewEmployeesByManager();
+    // case "VIEW_EMPLOYEES_BY_MANAGER":
+    //   return viewEmployeesByManager();
     case "ADD_EMPLOYEE":
       return addEmployee();
     case "UPDATE_EMPLOYEE_ROLE":
       return updateEmployeeRole();
     // added update employee manager
-      case "UPDATE_EMPLOYEE_MANAGER":
-      return updateEmployeeManager();
+    // case "UPDATE_EMPLOYEE_MANAGER":
+    //   return updateEmployeeManager();
     case "VIEW_DEPARTMENTS":
       return viewDepartments();
     case "ADD_DEPARTMENT":
@@ -324,3 +324,4 @@ function quit() {
   console.log("Goodbye!");
   process.exit();
 }
+
