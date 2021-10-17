@@ -93,16 +93,10 @@ async function loadMainPrompts() {
       return viewEmployees();
     case "VIEW_EMPLOYEES_BY_DEPARTMENT":
       return viewEmployeesByDepartment();
-    // added vie employees by manager
-    // case "VIEW_EMPLOYEES_BY_MANAGER":
-    //   return viewEmployeesByManager();
     case "ADD_EMPLOYEE":
       return addEmployee();
     case "UPDATE_EMPLOYEE_ROLE":
       return updateEmployeeRole();
-    // added update employee manager
-    // case "UPDATE_EMPLOYEE_MANAGER":
-    //   return updateEmployeeManager();
     case "VIEW_DEPARTMENTS":
       return viewDepartments();
     case "ADD_DEPARTMENT":
@@ -293,10 +287,6 @@ async function addEmployee() {
   employee.role_id = roleId;
 
   const managerChoices = employees.map(({ id, first_name, last_name }) => ({
-    // CREATE TWO PROPERTIES name AMD value FOR THIS OBJECT. THE PROPERTY name SHOULD CONTAIN THE CONCATENATION OF THE FIRST HAME AND THE LAST NAME.
-    // THE PROPERTY value SHOULD CONTAIN id.
-    // THIS OBJECT FOR EACH MANAGER WILL RETURN TO MAP() TO CONSTRUCT AN ARRAY TO BE RETURNED AND BE STORED TO managerChoices.
-    // TODO: YOUR CODE HERE
     name: `${first_name} ${last_name}`,
     value: id
   }));
